@@ -8,6 +8,7 @@ License: GPL
 URL: http://www.rosalab.ru
 Source: %name-%version.tar.bz2
 BuildRequires: kdelibs4-devel
+BuildRequires: libjpeg-devel
 
 BuildRoot: %_tmppath/%name-%version-%release-root
 
