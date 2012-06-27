@@ -15,6 +15,7 @@ Browse the stack of folders
 %files
 %{_kde_libdir}/kde4/plasma_applet_stackfolder.so
 %{_kde_datadir}/kde4/services/plasma-applet-stackfolder.desktop
+%{_kde_datadir}/apps/plasma/plasmoids/stackfolder
 
 %prep
 %setup -q
