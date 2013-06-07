@@ -3,13 +3,14 @@
 Name: plasma-applet-stackfolder
 Summary: Browse the stack of folders
 Version: 2.4
-Release: 3
+Release: 4
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.rosalab.ru
 Source0: %name-%version.tar.gz
 Source1: %name-doc-%{doc_version}.tar.gz
+Patch0: %name-configChanged.patch
 #Source1: %name-%version-docs.tar.gz
 BuildRequires: kdelibs4-devel
 BuildRequires: kdebase4-devel
@@ -28,6 +29,7 @@ Browse the stack of folders
 
 %prep
 %setup -q
+%apply_patches
 
 tar xvf %{SOURCE1}
 

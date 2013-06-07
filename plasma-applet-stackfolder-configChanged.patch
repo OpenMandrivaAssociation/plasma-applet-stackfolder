@@ -1,0 +1,23 @@
+--- plasma-applet-stackfolder-2.4/stackfolder.cpp.0000~	2012-12-08 18:17:59.000000000 +0100
++++ plasma-applet-stackfolder-2.4/stackfolder.cpp	2013-06-07 21:43:10.288516356 +0200
+@@ -283,14 +283,17 @@ void StackFolder::paintInterface(QPainte
+ 
+ void StackFolder::configChanged()
+ {
+-/*
+     const KUrl url = m_url;
+     m_url = config().readEntry("url", m_url);
+     if (url != m_url) {
+-        setUrl(m_url);
++        m_topUrl = m_url;
++	delete m_placesModel;
++	m_placesModel = 0;
+         m_dirModel->dirLister()->openUrl(m_url);
++	updateIconWidget();
++	folderChanged(m_url);
++	refreshIcons();
+     }
+-*/
+ }
+ 
+ void StackFolder::folderChanged(const KUrl& url)
