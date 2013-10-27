@@ -1,14 +1,15 @@
-%define doc_version 1.1
+%define doc_version 1.2
 
 Name: plasma-applet-stackfolder
 Summary: Browse the stack of folders
 Version: 2.4
-Release: 5
+Release: 6
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
 URL: http://www.rosalab.ru
 Source0: %name-%version.tar.gz
+Source1: %name-doc-%{doc_version}.tar.gz
 Patch0: %name-configChanged.patch
 BuildRequires: kdelibs4-devel
 BuildRequires: kdebase4-devel
@@ -23,10 +24,12 @@ Browse the stack of folders
 %_kde_datadir/apps/plasma/packages/org.kde.stackfolder/contents/ui/Button.qml
 %_kde_datadir/apps/plasma/packages/org.kde.stackfolder/contents/ui/Delegate.qml
 %_kde_datadir/apps/plasma/packages/org.kde.stackfolder/contents/ui/ScrollBar.qml
+%doc welcome-en.pdf welcome-ru.pdf
 
 %prep
 %setup -q
 %apply_patches
+tar xvf %{SOURCE1}
 
 %build
 %cmake_kde4
