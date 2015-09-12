@@ -3,7 +3,7 @@
 Name: plasma-applet-stackfolder
 Summary: Browse the stack of folders
 Version: 2.4
-Release: 15
+Release: 16
 Epoch: 1
 Group: Graphical desktop/KDE
 License: GPL
